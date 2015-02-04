@@ -1,0 +1,14 @@
+<template name="infinite_scrolling">
+  <div class="container fixed-height-container">
+    <div class="content">
+      {{#each items}}
+        <div class="alert alert-info">{{name}} <br> {{desc}}</div>
+      {{/each}}
+      {{#if moreResults}}
+        <div id="showMoreResults" style="margin-left: 25px;">
+          <span class="loading">Loading...</span>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</template>
