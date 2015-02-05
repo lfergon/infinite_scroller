@@ -1,11 +1,9 @@
 Template.infinite_scrolling.helpers({
-  items: function () {
-    return items.find();
-  },
   moreResults: function() {
+    var elements = this;
     // If, once the subscription is ready, we have less rows than we
     // asked for, we've got all the rows in the collection.
-    return !(items.find().count() < Session.get("itemsLimit"));
+    return !(elements.count() < Session.get("itemsLimit"));
   }
 });
 
