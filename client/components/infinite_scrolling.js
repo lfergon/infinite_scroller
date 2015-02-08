@@ -7,7 +7,7 @@ Template.infinite_scrolling.helpers({
   }
 });
 
-// whenever #showMoreResults becomes visible, retrieve more results
+// Whenever #showMoreResults becomes visible, retrieve more results
 var showMoreVisible = function () {
   var threshold, 
       target = $("#showMoreResults");
@@ -23,11 +23,10 @@ var showMoreVisible = function () {
     }
   } else {
     if (target.data("visible")) {
-      // console.log("target became invisible (below viewable arae)");
       target.data("visible", false);
     }
   }        
 };
  
-// run the above func every time the user scrolls
+// Run the above func every time the user scrolls
 $(window).scroll(showMoreVisible);

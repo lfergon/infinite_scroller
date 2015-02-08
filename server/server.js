@@ -1,4 +1,4 @@
-// generate dummy content
+// Generate dummy content
 Meteor.startup(function () {
   if (items.find().count() === 0) {
     for (var i = 0; i <= 5000; i++) {
